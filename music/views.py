@@ -1,8 +1,10 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse , HttpResponseRedirect
+from django.urls import reverse
 # Create your views here.
 def hello (request):
-    return HttpResponse("Done!")
+    url = reverse('music-list')
+    return HttpResponseRedirect(url)
 
 music_list = [
     {"id":1, "name":"song1", "singer":"ghomayshi"},
@@ -11,9 +13,14 @@ music_list = [
 ]
 
 def musics(request):
+    # data = ""
+    # for item in music_list:
+    #     data = data + f"{item['id']} : <a href='http://127.0.0.1:8000/music/detail/{item['id']}' target='_blank'>{item['name']}</a><br>"
+    # return HttpResponse(data)
     data = ""
     for item in music_list:
-        data = data + f"{item['id']} : <a href='http://127.0.0.1:8000/music/detail/{item['id']}' target='_blank'>{item['name']}</a><br>"
+        url = reverse('music-detail' , args=[item["id"]])
+        data = data + f"{item['id']} : <a href='{url}' target='_blank'>{item['name']}</a><br>"
     return HttpResponse(data)
 
 
