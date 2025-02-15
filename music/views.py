@@ -3,16 +3,30 @@ from django.http import HttpResponse , HttpResponseRedirect
 from django.urls import reverse
 # Create your views here.
 
+# لیست اطلاعات به صورت انگلیسی
+# musics = [
+#     {"id": 1, "name": "Havaye Khodaa", "singer": "Ebi"},
+#     {"id": 2, "name": "Zendegi", "singer": "Farhad"},
+#     {"id": 3, "name": "Khodahafezi", "singer": "Moein"},
+#     {"id": 4, "name": "Kooh", "singer": "Shadmehr Aghili"},
+#     {"id": 5, "name": "Har Shab", "singer": "Siavash Ghomayshi"},
+#     {"id": 6, "name": "Behet Ghol Midam", "singer": "Mohsen Yeganeh"},
+#     {"id": 7, "name": "To Ke Nisti", "singer": "Googoosh"},
+#     {"id": 8, "name": "Delam Tang Shodeh", "singer": "Sirvan Khosravi"},
+#     {"id": 9, "name": "Vay Vay", "singer": "Reza Sadeghi"}
+# ]
+
+# لیست اطلاعات به صورت فارسی 
 musics = [
-    {"id": 1, "name": "Havaye Khodaa", "singer": "Ebi"},
-    {"id": 2, "name": "Zendegi", "singer": "Farhad"},
-    {"id": 3, "name": "Khodahafezi", "singer": "Moein"},
-    {"id": 4, "name": "Kooh", "singer": "Shadmehr Aghili"},
-    {"id": 5, "name": "Har Shab", "singer": "Siavash Ghomayshi"},
-    {"id": 6, "name": "Behet Ghol Midam", "singer": "Mohsen Yeganeh"},
-    {"id": 7, "name": "To Ke Nisti", "singer": "Googoosh"},
-    {"id": 8, "name": "Delam Tang Shodeh", "singer": "Sirvan Khosravi"},
-    {"id": 9, "name": "Vay Vay", "singer": "Reza Sadeghi"}
+    {"id": 1, "name": "هوای خدا", "singer": "ابی"},
+    {"id": 2, "name": "زندگی", "singer": "فرهاد"},
+    {"id": 3, "name": "خداحافظی", "singer": "معین"},
+    {"id": 4, "name": "کوه", "singer": "شادمهر عقیلی"},
+    {"id": 5, "name": "هر شب", "singer": "سیاوش قمیشی"},
+    {"id": 6, "name": "بهت قول میدم", "singer": "محسن یگانه"},
+    {"id": 7, "name": "تو که نیستی", "singer": "گوگوش"},
+    {"id": 8, "name": "دلم تنگ شده", "singer": "سیروان خسروی"},
+    {"id": 9, "name": "وای وای", "singer": "رضا صادقی"}
 ]
 
 def hello (request):
